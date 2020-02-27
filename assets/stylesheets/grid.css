@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    margin: 0;
+}
+
+.square {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    list-style: none;
+}
+
+.chosen {
+    background-color: red;
+}
