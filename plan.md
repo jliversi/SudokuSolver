@@ -1,6 +1,6 @@
 SudokuSolver
 
-Game class
+Solver class
     initialize takes in game as string (or object from json)
     Stores sets, keeps reference to which ones have the most solved
 

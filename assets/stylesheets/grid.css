@@ -8,6 +8,17 @@
     width: 20px;
     height: 20px;
     list-style: none;
+    text-align: center;
+}
+
+.square > input {
+    width: 18px;
+    padding: 0;
+    border: none;
+}
+
+.square > input:focus {
+    outline: none;
 }
 
 .chosen {
