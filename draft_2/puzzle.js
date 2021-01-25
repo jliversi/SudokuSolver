@@ -1,27 +1,45 @@
 import SudokuDisplay from './display';
 import Square from './square';
 import SquareSet from './square_set';
-import { calcBoxIdx, calcMissingNums } from './util';
+import { calcBoxIdx } from './util';
 
 class Puzzle {
   constructor(input, mainEle) {
     // input should be an array of arrays of integers (0 for empty)
-    this.grid = input;
+    this.input = input;
     this.solved = false 
     this.dim = input.length
 
 
     this.display = new SudokuDisplay(this, mainEle);
+    this.rows = [];
+    this.cols = [];
+    this.boxes = [];
+    this.sqrs = Array.from({ length: this.dim }, () => []);
+
 
     this.setup();
   }
 
   setup() {
     this.display.createDOMGrid();
+    this.createSets();
+    this.createSqrs();
 
     this.setupSets();
     this.setupSqrs();
     // this.setupNodeSetsPostNodes();
+  }
+
+  createSets() {
+    for (let i = 0; i < this.dim; i++) {
+      const row = new SquareSet(this);
+      const col = new SquareSet(this);
+      const square = new SquareSet(this);
+      this.rows.push(row);
+      this.cols.push(col);
+      this.boxes.push(square);
+    }
   }
 
   createSqrs() {
@@ -38,16 +56,7 @@ class Puzzle {
   }
 
   setupSets() {
-    this.rows = Array.from({ length: this.dim }, (_,i) => {
-      return calcMissingNums(this.grid[i]);
-    });;
-    this.rows = Array.from({ length: this.dim }, (_,i) => {
-      return calcMissingNums(this.grid.map(row => row[i]));
-    });;
-
-    this.boxes = Array.from({ length: this.dim }, (_,i) => {
-      const boxArr = 
-    });;
+    this.eachSet(set => set.setup());
   }
 
   setupSqrs() {

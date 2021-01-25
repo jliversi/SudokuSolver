@@ -28,7 +28,7 @@ class SudokuDisplay {
   }
 
   // print at the end of solve
-  orderPrint(ms = 50, i = 0) {
+  orderPrint(ms = 5, i = 0) {
     setTimeout(() => {
       const { pos, val } = this.printOrder[i];
       this.domSqrs[pos[0]][pos[1]].innerHTML = val;

@@ -1,3 +1,11 @@
+export const calcRowIdx = (num, dim) => {
+  return Math.floor(num / dim);
+}
+
+export const calcColIdx = (num, dim) => {
+  return col % dim;
+}
+
 export const calcBoxIdx = (rowIdx, colIdx, dim) => {
   const numSets = Math.sqrt(dim);
   const rowSet = Math.floor(rowIdx / numSets);
@@ -26,12 +34,6 @@ export const setIntersection = (...sets) => {
     intersection = new Set([...nextSet].filter(x => intersection.has(x)))
   }
   return intersection;
-}
-
-export const calcMissingNums = (arr, len) => {
-  const result = new Set(Array.from({ length: len }, (_, i) => i + 1));
-  arr.forEach(el => result.delete(el));
-  return result;
 }
 
 export const deepDupArrObj = (obj) => {
