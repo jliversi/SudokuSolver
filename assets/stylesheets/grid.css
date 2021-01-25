@@ -1,15 +1,66 @@
+#main {
+    /* height: calc(100vh - 40px);
+    width: 100vw; */
+    height: 294px;
+    width: 294px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 40px;
+    margin: auto;
+    width: fit-content;
+    margin-top: 10vh;
+}
+
 .row {
+    margin: 0 auto;
     display: flex;
     margin: 0;
+    width: 294px;
+}
+
+.row:nth-child(3n) {
+    border-bottom: 2px solid black;
+}
+.row:last-child {
+    border-bottom: 3px solid black;
+}
+.row:first-child {
+    border-top: 3px solid black;
 }
 
 .square {
     border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     list-style: none;
     text-align: center;
+    font-size: 30px;
 }
+
+.square:nth-child(3n) {
+    border-right: 3px solid black;
+}
+.square:first-child {
+    border-left: 4px solid black;
+}
+.square:last-child {
+    border-right: 4px solid black;
+}
+
+@keyframes filled {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.content {
+    animation-name: filled;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    /* animation-delay: 0.3s; */
+}
+
 
 .square > input {
     width: 18px;
@@ -19,8 +70,4 @@
 
 .square > input:focus {
     outline: none;
-}
-
-.chosen {
-    background-color: red;
 }
