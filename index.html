@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/88d08e29d0.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./assets/stylesheets/reset.css">
     <link rel="stylesheet" href="./assets/stylesheets/grid.css">
     <script src="bundle.js" defer></script>
@@ -13,8 +15,31 @@
 </head>
 <body>
     <h1>Sudoku Solver</h1>
-
-    <div id="inputDiv" class='main'></div>
-    <div id="main" class='main'></div>
+    <section>
+        <a href="https://jliversi.github.io/" class='portfolio-link'><i class="fas fa-chevron-left"></i>  Portfolio Site</a>
+        <div class='left-col'>
+            <h2>Size</h2>
+            <button id='set-four'>4 x 4</button>
+            <button id='set-nine' class='selected-size'>9 x 9</button>
+            <h2>Sample Inputs</h2>
+            <button id='set-sample-0' class='selected-sample'>One</button>
+            <button id='set-sample-1'>Two</button>
+            <button id='set-sample-2'>Three</button>
+            <button id='set-sample-3'>Four</button>
+            <button id='set-sample-4'>Five</button>
+            <button id='set-sample-5'>Blank</button>
+        </div>
+        <div class='center'>
+            <div id="user-input" class='main'></div>
+            <button id='solve' class='solve'>Solve</button>
+        </div>
+        <div class='right-col'>
+            <h2>About</h2>
+            <p>This solver was built with nothing but vanilla Javascript. It starts by filling in trivially solvable values, and then progressively tries values from top-left to bottom-right until a solution is found. If the puzzle is determined to have no solution, errors are raised.</p>
+            <h2>Instructions</h2>
+            <p>Choose a sample input from the left, or input your own using blank. Then click solve!</p>
+            <h2><a href='https://github.com/jliversi/SudokuSolver'>Source here <i class="fab fa-github"></i></a></h2>
+        </div>
+    </section>
 </body>
 </html>
