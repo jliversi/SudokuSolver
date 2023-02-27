@@ -1,13 +1,13 @@
 /* main background color */
 body {
-    background-color: #FFFFF2;
+    background-color: #01161E;
     font-family: 'Arial';
     height: calc(100vh - 30px);
 }
 
 /* left-right column colors */
 div[class*=-col] {
-    background-color: lightgrey;
+    background-color: #124559;
     border: 3px solid black;
 }
 
@@ -17,7 +17,7 @@ input:focus {
 }
 
 button {
-    background-color: #00a2ff;
+    background-color: #598392;
     border: 2px solid black;
     font-family: inherit;
     transition: transform 0.2s, width 0.2;
@@ -26,11 +26,12 @@ button {
 /* header color */
 h1 {
     background: rgba(0,0,0,0.05);
-    border: 2px solid black;
+    border: 2px solid #124559;
+    color: #124559;
 }
 
 li {
-    background-color: rgba(0,0,0,0);
+    background-color: #AEC3B0;
 }
 
 
@@ -38,7 +39,6 @@ li {
     width: 400px;
     height: 420px;
     margin: 20px auto 0;
-    background-color: white;
     transition: all 0.3s;
 }
 
@@ -229,6 +229,7 @@ input {
 .error {
     text-align: center;
     margin: 0 auto;
+    color: #124559;
     line-height: 30px;
 }
 
@@ -250,7 +251,10 @@ a {
     font-size: 20px;
 }
 
+
+
 .portfolio-link {
+    color: #124559;
     position: absolute;
     top: -80px;
     left: 20px;
